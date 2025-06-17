@@ -13,9 +13,10 @@
             <span class="navbar-brand mb-0 h1">The Hartford Telematics</span>
             <div class="navbar-nav">
                 <div class="nav-item text-nowrap d-flex align-items-center">
-                    <a class="nav-link" href="index.html">Overview</a>
+                    <a class="nav-link" href="index.html">Home</a>
                     <a class="nav-link active" href="telematics-data.html">Driving Stats</a>
                     <a class="nav-link" href="rate-calculation.html">Safety & Savings</a>
+                    <a class="nav-link" href="news.html">News</a>
                 </div>
             </div>
         </div>
@@ -46,9 +47,9 @@
                         <div class="stat-detail">
                             <p><strong>Average Speed:</strong> <span id="avgSpeed">35</span> mph</p>
                             <p><strong>Max Speed:</strong> <span id="maxSpeed">72</span> mph</p>
-                            <p><strong>Time Over Speed Limit:</strong> <span id="overSpeed">2.5</span>%</p>
-                            <p><strong>Highway Driving:</strong> <span id="highway">45</span>%</p>
-                            <p><strong>City Driving:</strong> <span id="city">55</span>%</p>
+                            <p><strong>Time Over Speed Limit:</strong> <span id="overSpeed">N/A</span></p>
+                            <p><strong>Engine RPM Peaks:</strong> <span id="engineRPM">N/A</span></p>
+                            <p><strong>Fuel Efficiency:</strong> <span id="fuelEfficiency">N/A</span></p>
                         </div>
                     </div>
                 </div>
@@ -60,9 +61,10 @@
                     <div class="card-body">
                         <div class="stat-detail">
                             <p><strong>Total Trips:</strong> <span id="totalTrips">42</span></p>
-                            <p><strong>Average Trip Duration:</strong> <span id="avgDuration">23</span> minutes</p>
-                            <p><strong>Total Distance:</strong> <span id="totalDistance">547</span> miles</p>
-                            <p><strong>Average Daily Mileage:</strong> <span id="avgMileage">18.2</span> miles</p>
+                            <p><strong>Average Trip Duration:</strong> <span id="avgDuration">23 minutes</span></p>
+                            <p><strong>Total Distance:</strong> <span id="totalDistance">547 miles</span></p>
+                            <p><strong>Average Daily Mileage:</strong> <span id="avgMileage">18.2 miles</span></p>
+                            <p><strong>Engine Temperature:</strong> <span id="engineTemp">N/A</span></p>
                         </div>
                     </div>
                 </div>
@@ -78,7 +80,9 @@
                             <p><strong>Hard Braking Events:</strong> <span id="hardBrakes">5</span></p>
                             <p><strong>Rapid Acceleration Events:</strong> <span id="rapidAccel">3</span></p>
                             <p><strong>Sharp Turns:</strong> <span id="sharpTurns">7</span></p>
-                            <p><strong>Phone Usage While Driving:</strong> <span id="phoneUsage">2</span> instances</p>
+                            <p><strong>Phone Usage While Driving:</strong> <span id="phoneUsage">2 instances</span></p>
+                            <p><strong>Brake Pad Wear:</strong> <span id="brakePadWear">N/A</span></p>
+                            <p><strong>Tire Pressure Warnings:</strong> <span id="tirePressure">N/A</span></p>
                         </div>
                     </div>
                 </div>
@@ -89,14 +93,34 @@
                     </div>
                     <div class="card-body">
                         <div class="stat-detail">
-                            <p><strong>Rush Hour Driving:</strong> <span id="rushHour">30</span>%</p>
-                            <p><strong>Night Driving:</strong> <span id="nightDriving">15</span>%</p>
-                            <p><strong>Weekend Driving:</strong> <span id="weekend">25</span>%</p>
+                            <p><strong>Rush Hour Driving:</strong> <span id="rushHour">30%</span></p>
+                            <p><strong>Night Driving:</strong> <span id="nightDriving">15%</span></p>
+                            <p><strong>Weekend Driving:</strong> <span id="weekend">25%</span></p>
                             <p><strong>Peak Usage Times:</strong> <span id="peakTimes">8-9 AM, 5-6 PM</span></p>
+                            <p><strong>Engine Idle Time:</strong> <span id="idleTime">N/A</span></p>
+                            <p><strong>Engine Start/Stop Events:</strong> <span id="engineEvents">N/A</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Vehicle Health</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-detail">
+                            <p><strong>Check Engine Status:</strong> <span id="checkEngine">N/A</span></p>
+                            <p><strong>Battery Health:</strong> <span id="batteryHealth">N/A</span></p>
+                            <p><strong>Oil Life Remaining:</strong> <span id="oilLife">N/A</span></p>
+                            <p><strong>Diagnostic Codes:</strong> <span id="diagnosticCodes">N/A</span></p>
+                            <p><strong>Transmission Performance:</strong> <span id="transmission">N/A</span></p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="text-muted text-end mt-3">
+            <small><strong>Sensor Status:</strong> Mobile</small>
         </div>
     </div>
 
@@ -107,58 +131,49 @@
             week: {
                 avgSpeed: 35,
                 maxSpeed: 72,
-                overSpeed: 2.5,
-                highway: 45,
-                city: 55,
                 totalTrips: 42,
-                avgDuration: 23,
-                totalDistance: 547,
-                avgMileage: 18.2,
+                avgDuration: "23 minutes",
+                totalDistance: "547 miles",
+                avgMileage: "18.2 miles",
                 hardBrakes: 5,
                 rapidAccel: 3,
                 sharpTurns: 7,
-                phoneUsage: 2,
-                rushHour: 30,
-                nightDriving: 15,
-                weekend: 25,
+                phoneUsage: "2 instances",
+                rushHour: "30%",
+                nightDriving: "15%",
+                weekend: "25%",
                 peakTimes: "8-9 AM, 5-6 PM"
             },
             month: {
                 avgSpeed: 38,
                 maxSpeed: 75,
-                overSpeed: 3.2,
-                highway: 52,
-                city: 48,
                 totalTrips: 156,
-                avgDuration: 25,
-                totalDistance: 2250,
-                avgMileage: 21.5,
+                avgDuration: "25 minutes",
+                totalDistance: "2250 miles",
+                avgMileage: "21.5 miles",
                 hardBrakes: 18,
                 rapidAccel: 12,
                 sharpTurns: 24,
-                phoneUsage: 8,
-                rushHour: 35,
-                nightDriving: 18,
-                weekend: 28,
+                phoneUsage: "8 instances",
+                rushHour: "35%",
+                nightDriving: "18%",
+                weekend: "28%",
                 peakTimes: "7-9 AM, 4-6 PM"
             },
             quarter: {
                 avgSpeed: 37,
                 maxSpeed: 78,
-                overSpeed: 2.8,
-                highway: 49,
-                city: 51,
                 totalTrips: 425,
-                avgDuration: 24,
-                totalDistance: 6840,
-                avgMileage: 20.1,
+                avgDuration: "24 minutes",
+                totalDistance: "6840 miles",
+                avgMileage: "20.1 miles",
                 hardBrakes: 45,
                 rapidAccel: 32,
                 sharpTurns: 58,
-                phoneUsage: 22,
-                rushHour: 32,
-                nightDriving: 16,
-                weekend: 30,
+                phoneUsage: "22 instances",
+                rushHour: "32%",
+                nightDriving: "16%",
+                weekend: "30%",
                 peakTimes: "7-9 AM, 4-7 PM"
             }
         };
@@ -172,6 +187,20 @@
                     element.textContent = value;
                 }
             }
+            
+            // Keep sensor data as N/A except for speed data
+            const sensorElements = [
+                'overSpeed', 'engineRPM', 'fuelEfficiency',
+                'engineTemp', 'brakePadWear', 'tirePressure', 'idleTime', 'engineEvents',
+                'checkEngine', 'batteryHealth', 'oilLife', 'diagnosticCodes', 'transmission'
+            ];
+            
+            sensorElements.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = 'N/A';
+                }
+            });
         }
 
         // Add click event listeners to the buttons
