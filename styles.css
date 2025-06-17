@@ -1,15 +1,51 @@
+/* The Hartford Colors */
+:root {
+    --hartford-blue: #a0343d;
+    --hartford-light-blue: #b54850;
+    --hartford-accent: #960018;
+    --hartford-gray: #54565A;
+    --hartford-light-gray: #F1F1F1;
+}
+
 body {
-    background-color: #f8f9fa;
+    background-color: var(--hartford-light-gray);
+}
+
+.navbar {
+    background-color: var(--hartford-blue) !important;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: white !important;
+    margin: 0 8px;
+    padding: 8px 16px !important;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: white;
+    color: var(--hartford-blue) !important;
+    border-color: white;
 }
 
 .card {
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
 }
 
 .card-header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
+    background-color: var(--hartford-blue);
+    color: white;
+    border-bottom: none;
+}
+
+.card-header h4 {
+    margin-bottom: 0;
 }
 
 .profile-info p {
@@ -25,7 +61,7 @@ body {
 }
 
 .stat-card h5 {
-    color: #6c757d;
+    color: var(--hartford-gray);
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
@@ -33,30 +69,43 @@ body {
 .score {
     font-size: 2rem;
     font-weight: bold;
-    color: #0d6efd;
+    color: var(--hartford-light-blue);
     margin-bottom: 5px;
 }
 
 .progress {
     height: 8px;
     margin-top: 10px;
+    background-color: var(--hartford-light-gray);
+}
+
+.progress-bar {
+    background-color: var(--hartford-light-blue);
+}
+
+.progress-bar.bg-success {
+    background-color: #28a745;
+}
+
+.progress-bar.bg-warning {
+    background-color: #ffc107;
+}
+
+.progress-bar.bg-danger {
+    background-color: var(--hartford-accent);
 }
 
 .text-muted {
     font-size: 0.8rem;
     margin-top: 5px;
-}
-
-.navbar {
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--hartford-gray) !important;
 }
 
 /* Styles for telematics-data.html */
 .stat-detail p {
     margin-bottom: 0.75rem;
     padding: 0.5rem;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--hartford-light-gray);
 }
 
 .stat-detail p:last-child {
@@ -71,7 +120,7 @@ body {
 .savings-tier {
     padding: 1rem;
     border-radius: 8px;
-    background-color: #f8f9fa;
+    background-color: var(--hartford-light-gray);
     margin-bottom: 1rem;
 }
 
@@ -114,6 +163,79 @@ body {
 }
 
 .tip-card p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Styles for risk-model.html */
+.risk-category {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.risk-category h5 {
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.risk-category ul {
+    margin-bottom: 1rem;
+}
+
+.risk-category li {
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.risk-range {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.risk-range h5 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.risk-range p {
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.impact-factor {
+    margin-bottom: 1.5rem;
+}
+
+.impact-factor h5 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.impact-factor ul {
+    color: #6c757d;
+    padding-left: 1.2rem;
+}
+
+.impact-factor li {
+    margin-bottom: 0.3rem;
+}
+
+.timeline-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.timeline-item h5 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
     color: #6c757d;
     margin-bottom: 0;
 } 
