@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Telematics Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Insurance Telematics Dashboard</span>
+            <div class="navbar-nav">
+                <div class="nav-item text-nowrap">
+                    <a class="nav-link" href="index.html">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="mb-4">Detailed Telematics Data</h2>
+        
+        <!-- Time Period Selector -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active">Last Week</button>
+                    <button type="button" class="btn btn-outline-primary">Last Month</button>
+                    <button type="button" class="btn btn-outline-primary">Last 3 Months</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Stats -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Speed Analysis</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-detail">
+                            <p><strong>Average Speed:</strong> 35 mph</p>
+                            <p><strong>Max Speed:</strong> 72 mph</p>
+                            <p><strong>Time Over Speed Limit:</strong> 2.5%</p>
+                            <p><strong>Highway Driving:</strong> 45%</p>
+                            <p><strong>City Driving:</strong> 55%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Trip Information</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-detail">
+                            <p><strong>Total Trips:</strong> 42</p>
+                            <p><strong>Average Trip Duration:</strong> 23 minutes</p>
+                            <p><strong>Total Distance:</strong> 547 miles</p>
+                            <p><strong>Average Daily Mileage:</strong> 18.2 miles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Driving Behavior</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-detail">
+                            <p><strong>Hard Braking Events:</strong> 5</p>
+                            <p><strong>Rapid Acceleration Events:</strong> 3</p>
+                            <p><strong>Sharp Turns:</strong> 7</p>
+                            <p><strong>Phone Usage While Driving:</strong> 2 instances</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Time Analysis</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-detail">
+                            <p><strong>Rush Hour Driving:</strong> 30%</p>
+                            <p><strong>Night Driving:</strong> 15%</p>
+                            <p><strong>Weekend Driving:</strong> 25%</p>
+                            <p><strong>Peak Usage Times:</strong> 8-9 AM, 5-6 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

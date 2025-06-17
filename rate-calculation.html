@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Rate Calculation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Insurance Telematics Dashboard</span>
+            <div class="navbar-nav">
+                <div class="nav-item text-nowrap">
+                    <a class="nav-link" href="index.html">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="mb-4">How We Calculate Your Insurance Rate</h2>
+        
+        <!-- Introduction -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Understanding Telematics-Based Insurance</h5>
+                <p class="card-text">
+                    Our telematics program uses real-time driving data to provide personalized insurance rates. 
+                    Safe driving habits can lead to significant savings on your premium. Here's how we analyze 
+                    your driving data to calculate your rate.
+                </p>
+            </div>
+        </div>
+
+        <!-- Scoring Factors -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Primary Scoring Factors</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h5>Speed Management (25%)</h5>
+                                <p>Maintaining appropriate speeds and avoiding excessive acceleration</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Smooth Driving (25%)</h5>
+                                <p>Avoiding hard braking and aggressive cornering</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Time of Day (20%)</h5>
+                                <p>When and how often you drive (rush hour vs. off-peak)</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Distance Driven (15%)</h5>
+                                <p>Total mileage and trip frequency</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h5>Road Type Usage (15%)</h5>
+                                <p>Mix of highway and city driving</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Potential Savings</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="savings-tier mb-3">
+                            <h5>Premium Safe Driver</h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 95%"></div>
+                            </div>
+                            <p>Up to 30% discount</p>
+                        </div>
+                        <div class="savings-tier mb-3">
+                            <h5>Safe Driver Plus</h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 80%"></div>
+                            </div>
+                            <p>Up to 20% discount</p>
+                        </div>
+                        <div class="savings-tier mb-3">
+                            <h5>Safe Driver</h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" style="width: 65%"></div>
+                            </div>
+                            <p>Up to 10% discount</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Rate Calculation Frequency</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Your driving score is calculated daily, but rate adjustments are made:</p>
+                        <ul>
+                            <li>Monthly review of driving patterns</li>
+                            <li>Quarterly rate adjustments based on performance</li>
+                            <li>Annual comprehensive review</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Tips to Improve Your Score</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="tip-card">
+                            <h5>🚗 Smooth Driving</h5>
+                            <p>Accelerate and brake gradually. Maintain a safe following distance to avoid sudden stops.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tip-card">
+                            <h5>⏰ Time Management</h5>
+                            <p>Plan trips outside of rush hours when possible. Minimize late-night driving.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="tip-card">
+                            <h5>📱 Distraction-Free</h5>
+                            <p>Avoid phone usage while driving. Use hands-free devices when necessary.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
