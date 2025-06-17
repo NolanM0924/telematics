@@ -29,9 +29,9 @@
         <div class="card mb-4">
             <div class="card-body">
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-primary active">Last Week</button>
-                    <button type="button" class="btn btn-outline-primary">Last Month</button>
-                    <button type="button" class="btn btn-outline-primary">Last 3 Months</button>
+                    <button type="button" class="btn btn-outline-primary active" data-period="week">Last Week</button>
+                    <button type="button" class="btn btn-outline-primary" data-period="month">Last Month</button>
+                    <button type="button" class="btn btn-outline-primary" data-period="quarter">Last 3 Months</button>
                 </div>
             </div>
         </div>
@@ -45,11 +45,11 @@
                     </div>
                     <div class="card-body">
                         <div class="stat-detail">
-                            <p><strong>Average Speed:</strong> 35 mph</p>
-                            <p><strong>Max Speed:</strong> 72 mph</p>
-                            <p><strong>Time Over Speed Limit:</strong> 2.5%</p>
-                            <p><strong>Highway Driving:</strong> 45%</p>
-                            <p><strong>City Driving:</strong> 55%</p>
+                            <p><strong>Average Speed:</strong> <span id="avgSpeed">35</span> mph</p>
+                            <p><strong>Max Speed:</strong> <span id="maxSpeed">72</span> mph</p>
+                            <p><strong>Time Over Speed Limit:</strong> <span id="overSpeed">2.5</span>%</p>
+                            <p><strong>Highway Driving:</strong> <span id="highway">45</span>%</p>
+                            <p><strong>City Driving:</strong> <span id="city">55</span>%</p>
                         </div>
                     </div>
                 </div>
@@ -60,10 +60,10 @@
                     </div>
                     <div class="card-body">
                         <div class="stat-detail">
-                            <p><strong>Total Trips:</strong> 42</p>
-                            <p><strong>Average Trip Duration:</strong> 23 minutes</p>
-                            <p><strong>Total Distance:</strong> 547 miles</p>
-                            <p><strong>Average Daily Mileage:</strong> 18.2 miles</p>
+                            <p><strong>Total Trips:</strong> <span id="totalTrips">42</span></p>
+                            <p><strong>Average Trip Duration:</strong> <span id="avgDuration">23</span> minutes</p>
+                            <p><strong>Total Distance:</strong> <span id="totalDistance">547</span> miles</p>
+                            <p><strong>Average Daily Mileage:</strong> <span id="avgMileage">18.2</span> miles</p>
                         </div>
                     </div>
                 </div>
@@ -76,10 +76,10 @@
                     </div>
                     <div class="card-body">
                         <div class="stat-detail">
-                            <p><strong>Hard Braking Events:</strong> 5</p>
-                            <p><strong>Rapid Acceleration Events:</strong> 3</p>
-                            <p><strong>Sharp Turns:</strong> 7</p>
-                            <p><strong>Phone Usage While Driving:</strong> 2 instances</p>
+                            <p><strong>Hard Braking Events:</strong> <span id="hardBrakes">5</span></p>
+                            <p><strong>Rapid Acceleration Events:</strong> <span id="rapidAccel">3</span></p>
+                            <p><strong>Sharp Turns:</strong> <span id="sharpTurns">7</span></p>
+                            <p><strong>Phone Usage While Driving:</strong> <span id="phoneUsage">2</span> instances</p>
                         </div>
                     </div>
                 </div>
@@ -90,10 +90,10 @@
                     </div>
                     <div class="card-body">
                         <div class="stat-detail">
-                            <p><strong>Rush Hour Driving:</strong> 30%</p>
-                            <p><strong>Night Driving:</strong> 15%</p>
-                            <p><strong>Weekend Driving:</strong> 25%</p>
-                            <p><strong>Peak Usage Times:</strong> 8-9 AM, 5-6 PM</p>
+                            <p><strong>Rush Hour Driving:</strong> <span id="rushHour">30</span>%</p>
+                            <p><strong>Night Driving:</strong> <span id="nightDriving">15</span>%</p>
+                            <p><strong>Weekend Driving:</strong> <span id="weekend">25</span>%</p>
+                            <p><strong>Peak Usage Times:</strong> <span id="peakTimes">8-9 AM, 5-6 PM</span></p>
                         </div>
                     </div>
                 </div>
@@ -102,5 +102,95 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sample data for different time periods
+        const telematicsData = {
+            week: {
+                avgSpeed: 35,
+                maxSpeed: 72,
+                overSpeed: 2.5,
+                highway: 45,
+                city: 55,
+                totalTrips: 42,
+                avgDuration: 23,
+                totalDistance: 547,
+                avgMileage: 18.2,
+                hardBrakes: 5,
+                rapidAccel: 3,
+                sharpTurns: 7,
+                phoneUsage: 2,
+                rushHour: 30,
+                nightDriving: 15,
+                weekend: 25,
+                peakTimes: "8-9 AM, 5-6 PM"
+            },
+            month: {
+                avgSpeed: 38,
+                maxSpeed: 75,
+                overSpeed: 3.2,
+                highway: 52,
+                city: 48,
+                totalTrips: 156,
+                avgDuration: 25,
+                totalDistance: 2250,
+                avgMileage: 21.5,
+                hardBrakes: 18,
+                rapidAccel: 12,
+                sharpTurns: 24,
+                phoneUsage: 8,
+                rushHour: 35,
+                nightDriving: 18,
+                weekend: 28,
+                peakTimes: "7-9 AM, 4-6 PM"
+            },
+            quarter: {
+                avgSpeed: 37,
+                maxSpeed: 78,
+                overSpeed: 2.8,
+                highway: 49,
+                city: 51,
+                totalTrips: 425,
+                avgDuration: 24,
+                totalDistance: 6840,
+                avgMileage: 20.1,
+                hardBrakes: 45,
+                rapidAccel: 32,
+                sharpTurns: 58,
+                phoneUsage: 22,
+                rushHour: 32,
+                nightDriving: 16,
+                weekend: 30,
+                peakTimes: "7-9 AM, 4-7 PM"
+            }
+        };
+
+        // Function to update the display with new data
+        function updateDisplay(period) {
+            const data = telematicsData[period];
+            for (const [key, value] of Object.entries(data)) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = value;
+                }
+            }
+        }
+
+        // Add click event listeners to the buttons
+        document.querySelectorAll('.btn-group .btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.btn-group .btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                e.target.classList.add('active');
+                
+                // Update the display with new data
+                const period = e.target.getAttribute('data-period');
+                updateDisplay(period);
+            });
+        });
+    </script>
 </body>
 </html> 

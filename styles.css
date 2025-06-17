@@ -38,44 +38,86 @@ body {
     border: none;
 }
 
+/* Make the driving statistics card fill the height */
+.driving-stats-card {
+    height: calc(100% - 20px); /* Subtract margin-bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+.driving-stats-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5rem;
+}
+
+.driving-stats-card .row:first-child {
+    margin-bottom: 2rem;
+}
+
 .card-header {
     background-color: var(--hartford-blue);
     color: white;
     border-bottom: none;
+    padding: 0.75rem 1rem;
 }
 
 .card-header h4 {
     margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+/* Compact profile info */
+.profile-info {
+    padding: 0.5rem;
 }
 
 .profile-info p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.profile-info strong {
+    display: inline-block;
+    width: 110px;
+}
+
+/* More compact card body for user profile */
+.card .card-body {
+    padding: 1rem;
 }
 
 .stat-card {
-    padding: 15px;
+    padding: 1.25rem;
     text-align: center;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .stat-card h5 {
     color: var(--hartford-gray);
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .score {
     font-size: 2rem;
     font-weight: bold;
     color: var(--hartford-light-blue);
-    margin-bottom: 5px;
+    margin-bottom: 0.25rem;
 }
 
 .progress {
     height: 8px;
-    margin-top: 10px;
+    margin-top: 8px;
     background-color: var(--hartford-light-gray);
 }
 
