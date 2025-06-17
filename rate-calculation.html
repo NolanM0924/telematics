@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Rate Calculation</title>
+    <title>Safety & Savings Assessment</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,58 +15,112 @@
                 <div class="nav-item text-nowrap d-flex align-items-center">
                     <a class="nav-link" href="index.html">Overview</a>
                     <a class="nav-link" href="telematics-data.html">Driving Stats</a>
-                    <a class="nav-link active" href="rate-calculation.html">Premium Savings</a>
-                    <a class="nav-link" href="risk-model.html">Safety Assessment</a>
+                    <a class="nav-link active" href="rate-calculation.html">Safety & Savings</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <div class="container mt-4">
-        <h2 class="mb-4">How We Calculate Your Insurance Rate</h2>
+        <h2 class="mb-4">Safety Assessment & Premium Savings</h2>
         
-        <!-- Introduction -->
+        <!-- Current Status -->
         <div class="card mb-4">
+            <div class="card-header">
+                <h4>Your Safety Profile</h4>
+            </div>
             <div class="card-body">
-                <h5 class="card-title">Understanding Telematics-Based Insurance</h5>
-                <p class="card-text">
-                    Our telematics program uses real-time driving data to provide personalized insurance rates. 
-                    Safe driving habits can lead to significant savings on your premium. Here's how we analyze 
-                    your driving data to calculate your rate.
-                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="safety-score-card text-center">
+                            <h3>Current Safety Score</h3>
+                            <div class="large-score">92</div>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 92%"></div>
+                            </div>
+                            <h4 class="text-success">Premium Safe Driver</h4>
+                            <p class="savings-highlight">Current Premium Savings: 25%</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="key-factors">
+                            <h5>Key Safety Factors</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <span class="badge bg-success">Excellent</span>
+                                    Smooth driving patterns
+                                </li>
+                                <li class="mb-2">
+                                    <span class="badge bg-success">Excellent</span>
+                                    Speed management
+                                </li>
+                                <li class="mb-2">
+                                    <span class="badge bg-warning">Good</span>
+                                    Time of day distribution
+                                </li>
+                                <li class="mb-2">
+                                    <span class="badge bg-success">Excellent</span>
+                                    Trip consistency
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Scoring Factors -->
+        <!-- Scoring Categories -->
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h4>Primary Scoring Factors</h4>
+                        <h4>Safety Categories & Impact</h4>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <h5>Speed Management (25%)</h5>
-                                <p>Maintaining appropriate speeds and avoiding excessive acceleration</p>
-                            </li>
-                            <li class="list-group-item">
-                                <h5>Smooth Driving (25%)</h5>
-                                <p>Avoiding hard braking and aggressive cornering</p>
-                            </li>
-                            <li class="list-group-item">
-                                <h5>Time of Day (20%)</h5>
-                                <p>When and how often you drive (rush hour vs. off-peak)</p>
-                            </li>
-                            <li class="list-group-item">
-                                <h5>Distance Driven (15%)</h5>
-                                <p>Total mileage and trip frequency</p>
-                            </li>
-                            <li class="list-group-item">
-                                <h5>Road Type Usage (15%)</h5>
-                                <p>Mix of highway and city driving</p>
-                            </li>
-                        </ul>
+                        <div class="category-item mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Driving Behavior (40%)</h5>
+                                <span class="score-pill">38/40</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Acceleration and braking patterns</li>
+                                <li>Speed limit compliance</li>
+                                <li>Turning behavior</li>
+                            </ul>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="category-item mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Trip Patterns (30%)</h5>
+                                <span class="score-pill">25/30</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Time of day distribution</li>
+                                <li>Route consistency</li>
+                                <li>Traffic conditions</li>
+                            </ul>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 83%"></div>
+                            </div>
+                        </div>
+
+                        <div class="category-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Risk Exposure (30%)</h5>
+                                <span class="score-pill">29/30</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Total mileage</li>
+                                <li>Road type usage</li>
+                                <li>Weather conditions</li>
+                            </ul>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 97%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,72 +128,63 @@
             <div class="col-md-6">
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h4>Potential Savings</h4>
+                        <h4>Premium Savings Tiers</h4>
                     </div>
                     <div class="card-body">
-                        <div class="savings-tier mb-3">
-                            <h5>Premium Safe Driver</h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" style="width: 95%"></div>
+                        <div class="savings-tier current-tier mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Premium Safe Driver</h5>
+                                <span class="savings-badge">25-30% Savings</span>
                             </div>
-                            <p>Up to 30% discount</p>
+                            <p>Score: 90-100</p>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                            </div>
                         </div>
+
                         <div class="savings-tier mb-3">
-                            <h5>Safe Driver Plus</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Safe Driver Plus</h5>
+                                <span class="savings-badge">15-24% Savings</span>
+                            </div>
+                            <p>Score: 80-89</p>
                             <div class="progress">
                                 <div class="progress-bar bg-info" style="width: 80%"></div>
                             </div>
-                            <p>Up to 20% discount</p>
                         </div>
+
                         <div class="savings-tier mb-3">
-                            <h5>Safe Driver</h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-primary" style="width: 65%"></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5>Safe Driver</h5>
+                                <span class="savings-badge">5-14% Savings</span>
                             </div>
-                            <p>Up to 10% discount</p>
+                            <p>Score: 70-79</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mb-4">
+                <!-- Tips Section -->
+                <div class="card">
                     <div class="card-header">
-                        <h4>Rate Calculation Frequency</h4>
+                        <h4>Improve Your Score</h4>
                     </div>
                     <div class="card-body">
-                        <p>Your driving score is calculated daily, but rate adjustments are made:</p>
-                        <ul>
-                            <li>Monthly review of driving patterns</li>
-                            <li>Quarterly rate adjustments based on performance</li>
-                            <li>Annual comprehensive review</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tips Section -->
-        <div class="card mb-4">
-            <div class="card-header">
-                <h4>Tips to Improve Your Score</h4>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="tip-card">
-                            <h5>🚗 Smooth Driving</h5>
-                            <p>Accelerate and brake gradually. Maintain a safe following distance to avoid sudden stops.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tip-card">
-                            <h5>⏰ Time Management</h5>
-                            <p>Plan trips outside of rush hours when possible. Minimize late-night driving.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tip-card">
-                            <h5>📱 Distraction-Free</h5>
-                            <p>Avoid phone usage while driving. Use hands-free devices when necessary.</p>
+                        <div class="improvement-tips">
+                            <div class="tip-item">
+                                <h5>🚗 Top Opportunity</h5>
+                                <p>Reduce night driving between 11 PM and 4 AM to improve your trip patterns score.</p>
+                            </div>
+                            <div class="tip-item">
+                                <h5>⏰ Quick Win</h5>
+                                <p>Plan trips outside rush hours when possible to reduce risk exposure.</p>
+                            </div>
+                            <div class="tip-item">
+                                <h5>📈 Maintain Excellence</h5>
+                                <p>Continue your smooth acceleration and braking patterns.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
