@@ -1,8 +1,8 @@
 /* The Hartford Colors */
 :root {
-    --hartford-blue: #a0343d;
-    --hartford-light-blue: #b54850;
-    --hartford-accent: #960018;
+    --hartford-blue: #1b5499;
+    --hartford-light-blue: #2465b5;
+    --hartford-accent: #1b5499;
     --hartford-gray: #54565A;
     --hartford-light-gray: #F1F1F1;
 }
@@ -182,7 +182,7 @@ body {
 }
 
 .list-group-item h5 {
-    color: #0d6efd;
+    color: var(--hartford-blue);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
